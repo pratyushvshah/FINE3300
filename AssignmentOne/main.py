@@ -12,13 +12,14 @@ def mortgage_payments(principal, rate, ammortization):
     rapid_weekly_payment = monthly_payment / 4
     return (round(monthly_payment,2), round(semi_monthly_payment,2), round(bi_weekly_payment,2), round(weekly_payment,2), round(rapid_bi_weekly_payment,2), round(rapid_weekly_payment,2))
 
-# Function to take user input and call the mortgage class to calculate the payments
-def main():   
+if __name__ == "__main__":
+
+    # Take user input for principal, rate, and ammortization
     input_principal = float(input("Enter the principal amount: "))
     input_interest = float(input("Enter the interest rate: "))/100
     input_ammortization = int(input("Enter the ammortization period: "))
 
-    # Call the payments function from the mortgage class
+    # Call the payments function
     monthly_payment, semi_monthly_payment, bi_weekly_payment, weekly_payment, rapid_bi_weekly_payment, rapid_weekly_payment = mortgage_payments(input_principal, input_interest, input_ammortization)
 
     # Print the calculated payments
@@ -28,10 +29,3 @@ def main():
     print("Weekly Payment: ", weekly_payment)
     print("Rapid Bi-Weekly Payment: ", rapid_bi_weekly_payment)
     print("Rapid Weekly Payment: ", rapid_weekly_payment)
-
-# Call the main function
-if __name__ == "__main__":
-    main()
-
-
-
