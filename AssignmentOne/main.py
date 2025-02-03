@@ -1,9 +1,9 @@
 # Function to calculate the monthly, semi-monthly, bi-weekly, weekly, rapid bi-weekly and rapid weekly payments
-def mortgage_payments(principal, interest, ammortization):
-    monthly_rate = ((1 + interest/2)**(2/12) - 1)
-    semi_monthly_rate = ((1 + interest/2)**(2/24) - 1)
-    bi_weekly_rate = ((1 + interest/2)**(2/26) - 1)
-    weekly_rate = ((1 + interest/2)**(2/52) - 1) 
+def mortgage_payments(principal, rate, ammortization):
+    monthly_rate = ((1 + rate/2)**(2/12) - 1)
+    semi_monthly_rate = ((1 + rate/2)**(2/24) - 1)
+    bi_weekly_rate = ((1 + rate/2)**(2/26) - 1)
+    weekly_rate = ((1 + rate/2)**(2/52) - 1) 
     monthly_payment = principal * (((monthly_rate) * ((1 + monthly_rate)**(ammortization*12)))/(((1 + monthly_rate)**(ammortization*12)) - 1))
     semi_monthly_payment = principal * (((semi_monthly_rate) * ((1 + semi_monthly_rate)**(ammortization*24)))/(((1 + semi_monthly_rate)**(ammortization*24)) - 1))
     bi_weekly_payment = principal * (((bi_weekly_rate) * ((1 + bi_weekly_rate)**(ammortization*26)))/(((1 + bi_weekly_rate)**(ammortization*26)) - 1))
