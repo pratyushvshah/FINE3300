@@ -1,7 +1,7 @@
 ## Assignment One
 
-This program takes user inputs for that user's mortgage vales that are their principal, quoted interest rate, and ammortization program. 
+This program gives users a solution for calculating mortgage payments by accepting inputs like the principal amount, quoted interest rate, and amortization period. It generates payment schedules across multiple frequencies which are monthly, semi-monthly, bi-weekly, weekly, rapid bi-weekly, and rapid weekly options.
 
-It will calculate the user's monthly, semi-monthly, bi-weekly, weekly, rapid bi-weekly, and rapid weekly payments and print out those values.
+This program is designed to accommodate any range of values, the tool is adaptable and reusable, allowing users to explore different scenarios and identify payment plans that align with their unique financial goals and constraints. 
 
-It is useful since it works for any range of values and can be reused to assess what inputs work for the user's personal financial status. 
+This tool assumes the users will put in values without symbols and commas, and only input values that are valid and make sense. If these assumptions are broken, the user may see results that either do not make sense or run into some unexpected errors. 
